@@ -1,7 +1,9 @@
 
-# URL Shortener service
+# UrlCrunch (URL Shortener service) 🔗
 
 This project is a URL shortening service, designed to provide a more convenient and efficient way to manage long URLs. Built using MongoDB, Express, and NodeJS, it offers a robust and scalable solution for URL management. Our service stands out by providing detailed analytics for each shortened URL and ensuring secure access through JWT authentication.
+
+> You may find that the UI doesn't meet your expectations.
 
 
 ## Screenshots
@@ -48,12 +50,13 @@ These instructions will get you a copy of the project up and running on your loc
 ```npm start```
 
 5. Visit URL:  
-```http://localhost:3000/```
+```http://localhost:3000/```  
 
-### ```Note: The server has been set to run on PORT:3000```
+> Note: The server has been set to run on PORT:3000
+
 
 ## Contributing
-Any contributions you make are greatly appreciated.
+**Any contributions you make are greatly appreciated.**
 
 1. Fork the Project
 2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
