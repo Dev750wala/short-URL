@@ -67,6 +67,3 @@ Dev Sadisatsowala - [LinkedIn][reference]
 
 [reference]: https://www.linkedin.com/in/dev-sadisatsowala/   
 
-Project Link: [short-URL][reference]
-
-[reference]: https://github.com/Dev750wala/short-URL.git
