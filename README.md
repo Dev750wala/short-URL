@@ -17,11 +17,11 @@ This project is a URL shortening service, designed to provide a more convenient 
 ---    
 
 ## Features  
-***URL Shortening:*** Convert long URLs into short, manageable links that are easier to share.  
-***Error Handling:*** Comprehensive error management to ensure reliable and stable performance.  
-***User Authentication:*** Secure user authentication using JWT, providing a personalized experience.  
-***Analytics:*** Track the usage of your shortened URLs, including click counts and other relevant metrics.  
-***MongoDB Backend:*** Leverage the power and flexibility of MongoDB for efficient data storage and retrieval.
+- **URL Shortening:** Convert long URLs into short, manageable links that are easier to share.  
+- **Error Handling:** Comprehensive error management to ensure reliable and stable performance.  
+- **User Authentication:** Secure user authentication using JWT, providing a personalized experience.  
+- **Analytics:** Track the usage of your shortened URLs, including click counts and other relevant metrics.  
+- **MongoDB Backend:** Leverage the power and flexibility of MongoDB for efficient data storage and retrieval.
 
 ## Getting Started
 
