@@ -35,19 +35,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 #### Installation
 
-1. Clone the repositery:  
+1. Clone the repositery:    
 ```https://github.com/Dev750wala/short-URL.git```
 
-2. Navigate to the project directory:
+2. Navigate to the project directory:  
 ```cd short-URL```
 
-3. Install dependencies:
+3. Install dependencies:  
 ```npm install```
 
-4. Start the server:
+4. Start the server:  
 ```npm start```
 
-5. Visit URL:
+5. Visit URL:  
 ```http://localhost:3000/```
 
 ### ```Note: The server has been set to run on PORT:3000```
