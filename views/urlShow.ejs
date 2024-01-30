@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short URL</title>
 
     <style>
         body {
@@ -32,19 +35,27 @@
             margin: 20px;
             background-color: #f8f8f8;
         }
+        .vertical-center {
+            min-height: 100vh; 
+            min-height: calc(100vh - 56px); 
+            display: flex;
+            align-items: center;
+            margin-top: 3vh;
+            flex-direction: column;
+        }
+        .custom-heading {
+            font-family: 'Poppins', sans-serif;
+            align-self: center;
+            font-weight: 600;
+            font-size: 4vw;
+            color: #000224; 
+        }
     </style>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrlCrunch</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-
 </head>
-<body>
 
+<body>
     <nav class="py-2 bg-body-tertiary border-bottom" data-bs-theme="dark">
         <div class="container d-flex flex-wrap">
             <ul class="nav me-auto">
@@ -76,49 +87,29 @@
             </ul>
         </div>
     </nav>
-    
 
-    <div class="container">
-        <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-            <div class="col-md-6 text-center">
-                <h1 class="custom-heading">Paste the URL to be shortened</h1><br>
-
-                <form action="/url" method="post">
-                    <div class="form-group mb-3 mt-4">
-                        <input type="url" class="form-control" id="urlInput" placeholder="Enter URL here" required name="url">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Shorten URL</button>
-                </form><br><br>
-
-                
-                <!-- http://localhost:3000/url -->
-
-                <div class="features">
-                    <h2>Why Use Our URL Shortener?</h2><br>
-                    <ul style="text-align: start;">
-                        <li>Easy and quick way to shorten long URLs.</li>
-                        <li>Improved sharing on social media.</li>
-                        <li>Detailed analytics for tracking your links.</li>
-                        <li>Customizable short links for branding.</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="container mt-10 vertical-center">
+        <h1 class="custom-heading mb-5 mt-5">Your short URL is:</h1>
+        <div class="alert alert-primary mb-4" role="alert" style="word-wrap: break-word;">
+            http://localhost:3000/url/<%= id %>
         </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- Social Media Sharing Buttons -->
+        <div>
+            <a href="https://wa.me/?text=<%= encodeURIComponent(id) %>" class="btn btn-success">Share on WhatsApp</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(id) %>" class="btn btn-primary">Share on Facebook</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<%= encodeURIComponent(id) %>" class="btn btn-info">Share on LinkedIn</a>
+            <a href="mailto:?subject=I wanted to share this link with you&body=Check out this site <%= encodeURIComponent(id) %>" class="btn btn-secondary">Share via Email</a>
+        </div>
 
-    <div class="card">
-        <div class="container">
-            <footer class="py-3 my-4 mt-0">
-            <p class="text-center text-body-secondary">© Dev Sadisatsowala</p>
-            </footer>
+        <div class="mt-4">
+            <a href="/" class="btn btn-warning">Shorten another URL</a>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

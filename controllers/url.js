@@ -16,7 +16,7 @@ async function handleGenerateShortURL(req, res) {
             totalAnalytics: []
         });
 
-        return res.status(201).render("home", {
+        return res.status(201).render("urlShow", {
             id: shortID,
             user: req.user,
         });
@@ -37,6 +37,11 @@ async function handleRedirectToOriginalURL(req, res) {
                 }
             }
         });
+
+        if (!url) {
+            return res.status(404).json({ error: "URL not found" });
+        }    
+
         res.redirect(url.redirectURL);
     
     } catch(err) {

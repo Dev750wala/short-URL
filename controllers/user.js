@@ -58,16 +58,11 @@ async function handleCreateNewUser(req, res) {
             maxAge: max_age*1000
         });
 
-        res.status(201).render("home", {
-            user
-        });
+        res.status(201).json({ user: user._id });
 
     } catch (err) {
         const errors = handleErrors(err);
-        return res.render("signup", {
-            errEmail: errors,
-            errPassword: errors,
-        });
+        return res.json({ errors });
     }
 }
 
@@ -82,17 +77,12 @@ async function handleLoginUser(req, res) {
             httpOnly: true,
             maxAge: max_age*1000
         });
-        res.status(200).render("home", {
-            user,
-        });
+        res.status(200).json({ user: user._id });
 
     } catch (err) {
         const errors = handleErrors(err);
         console.log(errors);
-        return res.render("login", {
-            errEmail: errors,
-            errPassword: errors,
-        });
+        return res.json({ errors });
     }
 }   
 
